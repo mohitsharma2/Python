@@ -14,7 +14,7 @@ Do not hardcode the name of the image
 import requests
 r=requests.get('http://forsk.in/images/Forsk_logo_bw.png')
 
-with open('forsk_logo_bw.png','wb') as f:
+with open('C:/Users/mohit/Desktop/forsk_logo_bw.png','wb') as f:
     f.write(r.content)
 
 
@@ -22,4 +22,4 @@ output====================================
 
 
 
-C:/Users/mohit/forsk_logo_bw.png
+C:/Users/mohit/Desktop/forsk_logo_bw.png

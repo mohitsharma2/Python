@@ -29,6 +29,17 @@ print(m)
 n=y['USD_INR']*rupees
 print('USD_INR is: ',n)
 
+"""and"""
+
+
+import requests
+call=requests.get("http://free.currencyconverterapi.com/api/v5/convert?q=USD_INR&compact=ultra&apiKey=07ca862e0b339dd56245")
+y=dict(call.json())
+s=y['USD_INR']
+print(s)
+price=float(input("Enter the Amount in Doller:"))
+print("USD_IND: ",s*price)
+
 
 output==================================================
 

@@ -30,6 +30,34 @@ y['wind']
 time.ctime(y['sys']['sunrise'])
 time.ctime(y['sys']['sunset'])
 
+"""and"""
+
+import requests
+import time
+city=input("Enter the city name:")
+
+
+
+url="http://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=c6085dce47fe2425cc9893f2f8e22f3c"
+a=requests.get(url)
+or
+
+a=requests.get("http://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=c6085dce47fe2425cc9893f2f8e22f3c")
+
+
+
+b=a.json()
+print(b)
+b['coord']
+b['weather']
+b['wind']['speed']
+time.ctime(b['sys']['sunrise'])
+time.ctime(b['sys']['sunset'])
+
+
+
+
+
 output========================================================
 
 Enter City Name: Jaipur
@@ -48,3 +76,45 @@ y['wind']
 
 time.ctime(y['sys']['sunset'])
 'Fri Jan 10 17:50:16 2020'
+
+"""and"""
+
+
+{'coord': {'lon': 76, 'lat': 29},
+ 'weather': [{'id': 800,
+   'main': 'Clear',
+   'description': 'clear sky',
+   'icon': '01n'}],
+ 'base': 'model',
+ 'main': {'temp': 284.76,
+  'feels_like': 282.76,
+  'temp_min': 284.76,
+  'temp_max': 284.76,
+  'pressure': 1018,
+  'humidity': 65,
+  'sea_level': 1018,
+  'grnd_level': 993},
+ 'wind': {'speed': 1.33, 'deg': 6},
+ 'clouds': {'all': 0},
+ 'dt': 1580316122,
+ 'sys': {'country': 'IN', 'sunrise': 1580262398, 'sunset': 1580301066},
+ 'timezone': 19800,
+ 'id': 1270260,
+ 'name': 'Haryana',
+ 'cod': 200}
+
+b['coord']
+Out[53]: {'lon': 76, 'lat': 29}
+
+b['weather']
+Out[54]: [{'id': 800, 'main': 'Clear', 'description': 'clear sky', 'icon': '01n'}]
+
+b['wind']['speed']
+Out[55]: 1.33
+
+time.ctime(b['sys']['sunrise'])
+Out[56]: 'Wed Jan 29 07:16:38 2020'
+
+time.ctime(b['sys']['sunset'])
+Out[57]: 'Wed Jan 29 18:01:06 2020'
+
