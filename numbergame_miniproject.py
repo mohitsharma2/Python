@@ -12,6 +12,16 @@ Challenge 1
     then he loses so print player lose and computer wins.
 """
 
+"""
+Challenge 2
+    Print the secret number and guess number when Player loses using format function 
+"""
+
+"""
+Challenge 3
+    Print too HIGH or too LOW messages for bad guesses using elif. 
+"""
+
 import random
 secret_number=random.randint(1,10)
 guess_number=int(input("Enter the Guess number:"))
