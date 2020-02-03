@@ -53,65 +53,59 @@ n=1
 while(n<7):
     
     import random
+    
     x=input("Do you want to play then press '1':")
+    
     if x=="1":
-        print(x)
+        pass
     else:
         break
+    
     secret_number=random.randint(1,10)
+    
     try:
         guess_number=int(input("Enter the Guess number:"))
+    
     except:
         print("Invalid input! Int value only ")
+    
     n+=1
+    
     if guess_number==secret_number:
         print("Congratulation You WIN and Computer loose")
         break
     else:
         print("I'am sorry! You Loose and Computer Wins.Your Guess_number is:{} and secret_number is:{}".format(guess_number,secret_number))
+    
     if guess_number<secret_number:
         print("Too Low")
     else:
         print("Too High")
     
-     
-    
-    print("Number of Tries Left:",7-n)
+     print("Number of Tries Left:",7-n)
     
 output====================================================================================    
+
+
+Do you want to play then press '1':1
+1
 
 Enter the Guess number:6
 I'am sorry! You Loose and Computer Wins.Your Guess_number is:6 and secret_number is:7
 Too Low
-Play again
 Number of Tries Left: 5
 
-Enter the Guess number:5
-I'am sorry! You Loose and Computer Wins.Your Guess_number is:5 and secret_number is:10
+Do you want to play then press '1':1
+1
+
+Enter the Guess number:ghj
+Invalid input! Int value only 
+I'am sorry! You Loose and Computer Wins.Your Guess_number is:6 and secret_number is:10
 Too Low
-Play again
 Number of Tries Left: 4
 
-Enter the Guess number:4
-I'am sorry! You Loose and Computer Wins.Your Guess_number is:4 and secret_number is:10
-Too Low
-Play again
-Number of Tries Left: 3
+Do you want to play then press '1':1u
+1
 
-Enter the Guess number:7
-I'am sorry! You Loose and Computer Wins.Your Guess_number is:7 and secret_number is:6
-Too High
-Play again
-Number of Tries Left: 2
-
-Enter the Guess number:5
-I'am sorry! You Loose and Computer Wins.Your Guess_number is:5 and secret_number is:3
-Too High
-Play again
-Number of Tries Left: 1
-
-Enter the Guess number:4
-I'am sorry! You Loose and Computer Wins.Your Guess_number is:4 and secret_number is:3
-Too High
-Play again
-Number of Tries Left: 0
+Enter the Guess number:8
+Congratulation You WIN and Computer loose
