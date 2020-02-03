@@ -22,21 +22,116 @@ Challenge 3
     Print too HIGH or too LOW messages for bad guesses using elif. 
 """
 
-import random
-secret_number=random.randint(1,10)
-guess_number=int(input("Enter the Guess number:"))
+while(True):
+    
 
-if guess_number==secret_number:
-    print("Congratulation You WIN and Computer loose")
-else:
-    print("I'am sorry! You Loose and Computer Wins.Your Guess_number is:{} and secret_number is:{}".format(guess_number,secret_number))
-if guess_number<secret_number:
-    print("Too Low")
-else:
-    print("Too High")
+    import random
+    secret_number=random.randint(1,10)
+    guess_number=int(input("Enter the Guess number:"))
+    
+    if guess_number==secret_number:
+        print("Congratulation You WIN and Computer loose")
+        break
+    else:
+        print("I'am sorry! You Loose and Computer Wins.Your Guess_number is:{} and secret_number is:{}".format(guess_number,secret_number))
+    if guess_number<secret_number:
+        print("Too Low")
+    else:
+        print("Too High")
+    print("Play again")
+
     
 output======================================================
 
 Enter the Guess number:5
 I'am sorry! You Loose and Computer Wins.Your Guess_number is:5 and secret_number is:3
 Too High
+Play again
+
+Enter the Guess number:4
+I'am sorry! You Loose and Computer Wins.Your Guess_number is:4 and secret_number is:2
+Too High
+Play again
+
+Enter the Guess number:4
+I'am sorry! You Loose and Computer Wins.Your Guess_number is:4 and secret_number is:7
+Too Low
+Play again
+
+Enter the Guess number:4
+I'am sorry! You Loose and Computer Wins.Your Guess_number is:4 and secret_number is:3
+Too High
+Play again
+
+Enter the Guess number:4
+I'am sorry! You Loose and Computer Wins.Your Guess_number is:4 and secret_number is:8
+Too Low
+Play again
+
+Enter the Guess number:4
+I'am sorry! You Loose and Computer Wins.Your Guess_number is:4 and secret_number is:10
+Too Low
+Play again
+
+Enter the Guess number:4
+I'am sorry! You Loose and Computer Wins.Your Guess_number is:4 and secret_number is:6
+Too Low
+Play again
+
+Enter the Guess number:4
+I'am sorry! You Loose and Computer Wins.Your Guess_number is:4 and secret_number is:6
+Too Low
+Play again
+
+Enter the Guess number:4
+I'am sorry! You Loose and Computer Wins.Your Guess_number is:4 and secret_number is:2
+Too High
+Play again
+
+Enter the Guess number:4
+I'am sorry! You Loose and Computer Wins.Your Guess_number is:4 and secret_number is:7
+Too Low
+Play again
+
+Enter the Guess number:4
+I'am sorry! You Loose and Computer Wins.Your Guess_number is:4 and secret_number is:2
+Too High
+Play again
+
+Enter the Guess number:4
+I'am sorry! You Loose and Computer Wins.Your Guess_number is:4 and secret_number is:5
+Too Low
+Play again
+
+Enter the Guess number:4
+I'am sorry! You Loose and Computer Wins.Your Guess_number is:4 and secret_number is:5
+Too Low
+Play again
+
+Enter the Guess number:4
+I'am sorry! You Loose and Computer Wins.Your Guess_number is:4 and secret_number is:7
+Too Low
+Play again
+
+Enter the Guess number:4
+I'am sorry! You Loose and Computer Wins.Your Guess_number is:4 and secret_number is:8
+Too Low
+Play again
+
+Enter the Guess number:4
+I'am sorry! You Loose and Computer Wins.Your Guess_number is:4 and secret_number is:1
+Too High
+Play again
+
+Enter the Guess number:4
+I'am sorry! You Loose and Computer Wins.Your Guess_number is:4 and secret_number is:6
+Too Low
+Play again
+
+Enter the Guess number:6
+I'am sorry! You Loose and Computer Wins.Your Guess_number is:6 and secret_number is:5
+Too High
+Play again
+
+Enter the Guess number:4
+Congratulation You WIN and Computer loose
