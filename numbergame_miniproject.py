@@ -20,8 +20,13 @@ if guess_number==secret_number:
     print("Congratulation You WIN and Computer loose")
 else:
     print("I'am sorry! You Loose and Computer Wins.Your Guess_number is:{} and secret_number is:{}".format(guess_number,secret_number))
-
+if guess_number<secret_number:
+    print("Too Low")
+else:
+    print("Too High")
+    
 output======================================================
 
-Enter the Guess number:6
-I'am sorry! You Loose and Computer Wins.Your Guess_number is:6 and secret_number is:7
+Enter the Guess number:5
+I'am sorry! You Loose and Computer Wins.Your Guess_number is:5 and secret_number is:3
+Too High
