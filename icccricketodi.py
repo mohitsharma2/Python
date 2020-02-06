@@ -39,7 +39,7 @@ for row in right_table.findAll('tr'):
     cells = row.findAll('td')
     if len(cells) !=0:
    # or
-    #if len(cells)==0:
+    #if len(cells)==5:
         A.append(cells[0].text.strip())
         B.append(cells[1].text.strip())
         C.append(cells[2].text.strip())
@@ -52,5 +52,5 @@ col_data = OrderedDict(zip(col_name,[A,B,C,D,E]))
 print(col_data)
 import pandas as pd
 df=pd.DataFrame(col_data)
-df.to_csv("icc.csv")
+df.to_csv("odi.csv")
 
