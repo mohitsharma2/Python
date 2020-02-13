@@ -77,5 +77,38 @@ output======================================================
 9
 10
     
+
+#to generate fibonacci numbers
+
+
+
+def fib():
+    a,b=0,1
     
-    
+    while True:
+        yield a
+        a,b=b,a+b
+
+for n in fib():
+    if n>100:
+        break
+    print(n)
+
+fb=fib()
+next(fb)
+"""
+output=============================================================
+
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+"""
