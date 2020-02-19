@@ -56,3 +56,70 @@ m1=male('mohit',24,5.5,60,'fair')
 f1=female('kohit',23,5.1,52,'fair')
 
 print(f1.color)
+
+
+
+
+
+
+#new class
+
+class   employee:
+    '''doc string (description)'''
+    def __init__(self,eno,ename,esal,eaddr):  #self always pointing to the current object
+        # within the class if you want to refer current object so that "self" must be requried 
+        self.eno=eno
+        self.ename=ename
+        self.esal=esal
+        self.eaddr=eaddr
+        
+    def info(self):  # object releated method
+        print("Employee number:",self.eno)
+        print("Employee name:",self.ename)
+        print("Employee salary:",self.esal)
+        print("Employee address:",self.eaddr)
+        
+#e1=employee(10,'mohit',25000,'Jaipur')
+#'''
+#or
+e1=employee(eno=10,ename='mohit',esal=25000,eaddr='Jaipur')
+#'''
+e2=employee(11,'yogendra',25000,'UP')
+
+e1.info()
+e2.info()   
+
+'''
+output
+
+e1.info()
+Employee number: 10
+Employee name: mohit
+Employee salary: 25000
+Employee address: Jaipur
+
+e2.info()
+Employee number: 11
+Employee name: yogendra
+Employee salary: 25000
+Employee address: UP
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    
+    
