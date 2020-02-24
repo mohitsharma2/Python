@@ -21,74 +21,80 @@ Code Challenge
        write bib entry and make authoryear.
           
 """
-
-class Book:
-    
-    def __init__(self,firstname,lastname,booktitle,bookvolumenumber,bookpages,publication_year):
-        self.firstname=firstname
-        self.lastname=lastname
-        self.booktitle=booktitle
-        self.bookvolumenumber=bookvolumenumber
-        self.bookpages=bookpages
-        self.publication_year=publication_year
+class Book():
+    def __init__(self,authorfirst_name, authorlast_name,book_title, place, publisher, year):
+        self.authorfirst_name = authorfirst_name
+        self.authorlast_name = authorlast_name
+        self.book_title = book_title
+        self.place = place
+        self.publisher = publisher
+        self.year = year
         
     def write_bib_entry(self):
-#        return ', '.join([self.firstname+self.lastname,self.booktitle,str(self.bookpages),str(self.publication_year)])
-        return self.firstname \
-               + '  ' + self.lastname \
-               + ', ' + self.booktitle + ', ' + self.bookvolumenumber \
-               + ',' + self.bookpages + ', ' \
-               + self.publication_year + '.'
+#        return ', '.join([self.authorfirst_name,self.authorlast_name,self.book_title,self.place,self.publisher,str(self.year)])
+        return self.authorfirst_name \
+               + '  ' + self.authorlast_name \
+               + ', ' + self.book_title + ', ' + self.place \
+               + ',' + self.publisher + ', ' \
+               + str(self.year) + '.'
                
-#        print('Author name:',self.firstname,self.lastname)
-#        print('Title of Book:',self.booktitle)
-#        print('Volume Number:',self.bookvolumenumber)
-#        print('Number of Pages in Book:',self.bookpages)
-#        print('Publication Year:',self.publication_year)
-#        
-    def make_authoryear(self):
-        return self.firstname \
-               + '  ' + self.lastname \
-               + ', ' + self.booktitle + ', ' + self.bookvolumenumber \
-               + ',' + self.bookpages + ', ' \
-               + self.publication_year + '.'
-        
+#        print('Author name:',self.authorfirst_name,self.authorlast_name)
+#        print('Title of Book:',self.book_title)
+#        print('Place:',self.place)
+#        print('Publisher :',self.publisher )
+#        print('Year:',self.year)
 
-        
-
-        
-        
-beauty=Book('mohit','sharma','you are the password of my life','12','366','2019')
-
-pynut=Book('puneet','kumar','Hum Char','9','264','2018')
- #beauty and pynut are instance
-makeup=Book('Anthony','Doerr','All the Light We Cannot See','1','544','2014')
-
-
-print(write_bib_entry(beauty))
-
-print(write_bib_entry(pynut))
     
-beauty.publication_year=2010
+    def make_authoryear(self):
+        self.author_year=self.authorlast_name+'('+str(self.year)+')'
 
-print(write_bib_entry(beauty))
+beauty=Book('mohit','sharma','you are the password of my life','MP','RRK','2019')
 
-print(write_bib_entry(makeup))
-
-
+pynut=Book('puneet','kumar','Hum Char','Rajasthan','SKS','2018')
 
 
-"""
-output=========================================================================
 
-mohit  sharma, you are the password of my life, 12,  366, 2019.
+print(pynut.authorfirst_name,pynut.authorlast_name)
 
-puneet  kumar, Hum Char, 9:  264, 2018.
 
-Anthony  Doerr, All the Light We Cannot See, 1,  544, 2014.
+print(pynut.write_bib_entry())
 
-#after modification in publication year
+beauty.year=2010
+print(beauty.year)
 
-mohit  sharma, you are the password of my life, 12,  366, 2010.
+make_up=Book('Anthony','Doerr','All the Light We Cannot See','UK','MPE','2014')
+print(make_up.write_bib_entry())
 
-"""
+beauty.make_authoryear()
+print(beauty.author_year)
+
+
+class Article():
+    def __init__(self, authorfirst_name, authorlast_name,book_title, place, publisher, year,volume,pages):
+        self.authorfirst_name = authorfirst_name
+        self.authorlast_name = authorlast_name
+        self.book_title = book_title
+        self.place = place
+        self.publisher = publisher
+        self.year = year
+        self.volume=volume
+        self.pages=pages
+        
+    def write_bib_entry(self):
+#        return ', '.join([self.authorfirst_name,self.authorlast_name,self.book_title,self.place,self.publisher,str(self.year),\
+#                          str(self.volume),str(self.pages)])
+        return self.authorfirst_name \
+               + '  ' + self.authorlast_name \
+               + ', ' + self.book_title + ', ' + self.place \
+               + ',' + self.publisher + ', ' \
+               + str(self.year) \
+               + str(self.volume)\
+               +str(self.pages) + '.'
+
+    def make_authoryear(self):
+        self.authoryear=self.authorlast_name+'('+str(self.year)+')'
+
+
+
+
+
