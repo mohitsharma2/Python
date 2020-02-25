@@ -77,9 +77,9 @@ class Bibliography():
         return output[0:]
     
             
-beauty = Book('Kumar','Yogi','Machine Learning','Jaipur','TMH',2020)
+beauty=Book('mohit','sharma','you are the password of my life','MP','RRK','2019')
 
-pynut = Book('Gari','Mohit','SSC','jaipur','Kiran',2015) 
+pynut=Book('puneet','kumar','Hum Char','Rajasthan','SKS','2018')
 
 nature = Book( "Smith", "Jane", "My Nobel prize-winning paper",
                    "481", "234-236", "2012" )
