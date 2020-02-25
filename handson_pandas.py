@@ -20,7 +20,7 @@ import pandas as pd
 
 df = pd.read_csv("C:/Users/mohit/Desktop/FORSKCODE/Salaries.csv")
 
-#1
+#1. Which Male and Female Professor has the highest and the lowest salaries
 
 x=df[(df['rank']=='Prof') & (df['sex']=='Male')]
 print(x)
@@ -47,7 +47,8 @@ print(maximum)
 minimum = y[y['salary']== y['salary'].min()]
 print(minimum)
 
-#2
+#2. Which Professor takes the highest and lowest salaries.
+
 
 high=df[df['rank']=='Prof']
 high['salary'].max()
@@ -55,47 +56,21 @@ high['salary'].max()
 low=df[df['rank']=='Prof']
 low['salary'].min()
 
-#3  3. Missing Salaries - should be mean of the matching salaries of those 
-#      whose service is the same
+#3. Missing Salaries - should be mean of the matching salaries of those whose service is the same
 
-df[df['salary'].isnull()]
+df1=df[df['salary'].isnull()]['service']
+
+df[(df['service']==18) | (df['service']==2)]
+
+df2=df[df['service']==18]
+a=df2['salary'].mean()    # service 18 ki salries ka mean nikal kr nanm dalna h.
+                          # service 2 ki salries ka mean nikal kr nanm dalna h.
+df3=df[df['service']==2]
+b=df3['salary'].mean()
+
+df[df['service']==18]['salary'].fillna(a)
+df[df['service']==2]['salary'].fillna(b)
 
 
 
 
-
-#5
-
-import matplotlib.pyplot as plt
-count=df['sex'].value_counts()
-df['sex'].value_counts(normalize = True)
-
-print(count)
-
-labels =['Male','Female']
-sizes=[39,39]
-colors=['gold', 'yellowgreen']
-explode=(0,0)
-
-plt.pie(sizes,labels=labels,colors=colors,explode=explode,autopct="%1.1f%%")
-plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-plt.show()
-
-#6
-
-labels=df['rank'].unique()
-print(labels)
-df['rank'].value_counts()
-sizes=[46,19,13]
-colors=['lightcoral', 'lightskyblue','yellowgreen']
-explode=[0,0,0]
-plt.pie(sizes,labels=labels,colors=colors,explode=explode,autopct="%1.1f%%")
-plt.axis('equal')
-plt.show()
-
-#7
-
-df.columns
-
-df[df['service']==df['service'].max()]
-df[df['service']==df['service'].min()]
