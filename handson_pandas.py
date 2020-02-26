@@ -108,4 +108,16 @@ plt.pie(sizes,labels=labels,colors=colors,explode=explode,autopct="%1.1f%%")
 plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 plt.show()
 
+#6. How many are Prof, AssocProf and AsstProf. 
+#   Show both in numbers adn Graphically using a Pie Chart
+
+labels=df['rank'].unique()
+print(labels)
+df['rank'].value_counts()
+sizes=[46,19,13]
+colors=['lightcoral', 'lightskyblue','yellowgreen']
+explode=[0,0,0]
+plt.pie(sizes,labels=labels,colors=colors,explode=explode,autopct="%1.1f%%")
+plt.axis('equal')
+plt.show()
 
