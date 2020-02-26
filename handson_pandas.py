@@ -89,3 +89,23 @@ df[df['service']==8]['phd'].fillna(d)
 
 
 
+#5. How many are Male Staff and how many are Female Staff. 
+#   Show both in numbers and Graphically using Pie Chart.  
+#   Show both numbers and in percentage
+
+import matplotlib.pyplot as plt
+count=df['sex'].value_counts()
+df['sex'].value_counts(normalize = True)
+
+print(count)
+
+labels =['Male','Female']
+sizes=[39,39]
+colors=['gold', 'yellowgreen']
+explode=(0,0)
+
+plt.pie(sizes,labels=labels,colors=colors,explode=explode,autopct="%1.1f%%")
+plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+plt.show()
+
+
