@@ -74,3 +74,18 @@ df[df['service']==2]['salary'].fillna(b)
 
 
 
+#4. Missing phd - should be mean of the matching service 
+
+df[df['phd'].isnull()]['service']
+df[(df['service']==33) | (df['service']==8)]
+df4=df[df['service']==33]
+c=df4['service'].mean()
+
+df5=df[df['service']==8]
+d=df5['service'].mean()
+
+df[df['service']==33]['phd'].fillna(c)
+df[df['service']==8]['phd'].fillna(d)
+
+
+
