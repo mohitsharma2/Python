@@ -121,3 +121,20 @@ plt.pie(sizes,labels=labels,colors=colors,explode=explode,autopct="%1.1f%%")
 plt.axis('equal')
 plt.show()
 
+#7. Who are the senior and junior most employees in the organization.
+
+df.columns
+
+df[df['service']==df['service'].max()]
+df[df['service']==df['service'].min()]
+
+#8. Draw a histogram of the salaries divided into bin starting from 50K and increment of 15K
+
+import matplotlib.pyplot as plt
+#df['salary']
+plt.hist(df['salary'],bins=range(50000,200000,15000)) 
+plt.xlabel('Salary')
+plt.ylabel('Frequency')
+plt.title('Salary Distribution')
+plt.grid(True)
+plt.show()
