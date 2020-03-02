@@ -23,7 +23,7 @@ import pandas as pd
 import numpy as np
 
 
-df=pd.read_csv("C:/Users/mohit/Desktop/FORSKCODE/Baltimore_City_Employee_Salaries_FY2014.csv")
+df=pd.read_csv("C:/Users/mohit/Desktop/python/Baltimore_City_Employee_Salaries_FY2014.csv")
 df.columns
 
 #  1.assign it as a int
@@ -59,3 +59,5 @@ Name: AnnualSalary, dtype: int64
 #2. Group the data on JobTitle and AnnualSalary, and aggregate with sum, mean, etc.
 #       Sort the data and display to show who get the highest salary
 
+read=df.groupby(['JobTitle','AnnualSalary'])
+read.count()
