@@ -44,7 +44,7 @@ Code Challenge
 import matplotlib.pyplot as plt
 import pandas as pd
 
-df=pd.read_csv("C:/Users/mohit/Desktop/FORSKCODE/training_titanic.csv")
+df=pd.read_csv("C:/Users/mohit/Desktop/python/training_titanic.csv")
 
 df.columns
 
