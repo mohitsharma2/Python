@@ -13,8 +13,8 @@ GIT Commands
 # git clone https://github.com/mohitsharma2/FSDP_2019.git
 # Change directory to FSDP_2019
 # create a test.py file on desktop/FSDP_2019
-# git config user.email "sylvester@neuerung.co.in"
-# git config user.name "Dr. Sylvester Fernandes"
+# git config user.email "mohit121993@gmail.com"
+# git config user.name "mohitsharma2"
 
 
 # Example to understand the concept 
