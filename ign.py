@@ -39,12 +39,12 @@ find_game.head(10)
 
 
 x=df[df['platform']=='PlayStation 4']
+print(x)
 
+y=df[(df['platform']=='Xbox One')]
+print(y)
 
-
-y=df[(df['platform']=='Xbox 360')]
-
-plt.hist(x['score'],bins=[0,2,4,6,8,10],width=0.5)
+plt.hist(x['score'],bins=[0,2,4,6,8,10])
 plt.xlabel('PlayStation 4')
 plt.ylabel('score')
 
